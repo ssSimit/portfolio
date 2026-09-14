@@ -3,6 +3,21 @@
 
 const projects = [
     {
+        id: "project-one",
+        title: "Highway Domination",
+        tagline: "A fast-paced desert racing game available on Y8",
+        shortDesc: "Race through the desert at blazing speeds, dodge traffic, and dominate the highway with your favorite bike!",
+        longDesc: 'Experience fast-paced desert racing in Highway Domination Desert! Choose from different bikes, weave through traffic, and push your speed to the limit. Avoid crashes, master the road, and prove you can dominate the desert highway. Play now on Y8 and see how far you can go!',
+        tech: ["Unity", "3D", "Y8", "Y8 Ads"],
+        video: "assets/videos/highwayDomination.mp4",
+        poster: "assets/images/highway-domination-poster.png",
+        orientation: "landscape",
+        cardMedia: "video",
+        link: "https://y8.com/games/highway_domination_desert",
+        playUrl: "https://y8.com/games/highway_domination_desert",
+        buttonText: "PLAY GAME→",
+    },
+    {
         id: "navroom-ar",
         title: "Indoor AR Navigation",
         tagline: "HackFusion 2026 winning project",
@@ -19,13 +34,15 @@ const projects = [
     follow in AR. Room selection is handled through a dynamically
     generated UI. Multi-floor navigation is designed around swapping in
     separate NavMesh prefabs per floor marker.`,
-        tech: ["Unity", "AR Foundation", "ARCore", "C#", "Blender", "NavMesh", "LineRenderer"],
+        tech: ["Unity", "AR Foundation", "ARCore", "Blender", "NavMesh"],
         video: "assets/videos/arNav.mp4",
         poster: "assets/images/navroom-ar-poster.png",
         orientation: "portrait",
         cardMedia: "image",
         link: "https://github.com/ssSimit/hackathon-indoor-ar-navigation",
         buttonText: "VIEW PROJECT→",
+        showOnHome: true
+
     },
     {
         id: "project-two",
@@ -42,13 +59,15 @@ const projects = [
         playUrl: "https://www.y8.com/games/extreme_wheels_2_player_racing",
         buttonText: "PLAY GAME→",
     },
+
+
     {
         id: "project-three",
         title: "ABCs Tracer",
         tagline: "A learning app for kids to trace alphabet letters",
         shortDesc: "Trace the dotted letters to learn the alphabet, with a fun and interactive experience.",
         longDesc: `ABCs Tracer is a learning app designed for young children to practice tracing alphabet letters. The app features alphabets from A-Z with a fun and interactive interface that makes learning the alphabet engaging and enjoyable.`,
-        tech: ["Unity", "WebGL", "Y8", "Mobile Friendly"],
+        tech: ["Unity", "WebGL", "Mobile Friendly"],
         video: "assets/videos/abcTracer.mp4",
         poster: "assets/images/abcs-tracer-poster.png",
         orientation: "landscape",
@@ -72,12 +91,13 @@ const projects = [
         link: "https://www.y8.com/games/cliffside_racing",
         playUrl: "https://www.y8.com/games/cliffside_racing",
         buttonText: "PLAY GAME→",
+        showOnHome: false
     },
     {
         id: "project-five",
         title: "Call Break Multiplayer",
         tagline: "A multiplayer learning project",
-        shortDesc: "A multiplayer card game built in Unity, featuring real-time gameplay and a custom server for managing game state.",
+        shortDesc: "A multiplayer card game built in Unity, featuring real-time gameplay and a custom server for managing game state. (Network learning project)",
         longDesc: `Developed a scalable Callbreak card game in Unity, initially designed as a single-player project with multiplayer architecture in mind. Built a custom Node.js backend using native WebSockets to learn real-time networking, implementing a gameplay state broadcasting system for synchronized multiplayer sessions. Focused on clean architecture, scalability, and understanding real-time communication.`,
         tech: ["Learning Project", "REST", "WebSockets"],
         video: "assets/videos/callbreakMultiplayer.mp4",
@@ -103,7 +123,6 @@ const projects = [
         cardMedia: "video",
         link: "https://play.google.com/store/apps/details?id=com.ChimpVine.ShapesExplorer&hl=en_US&pli=1",
         buttonText: "PLAY GAME→",
-    }
-
+    },
 
 ];

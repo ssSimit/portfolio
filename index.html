@@ -14,141 +14,394 @@
 <body>
 
   <nav class="navbar">
-    <a href="#home" class="logo">SIMIT<span class="cursor">_</span></a>
+    <a href="#home" class="logo">PORTFOLIO<span class="cursor">_</span></a>
     <ul class="nav-links">
       <li><a href="#home">./home</a></li>
       <li><a href="#projects">./projects</a></li>
-      <li><a href="#experience">./experience</a></li>
-      <!-- <li><a href="#skills">./skills</a></li> -->
+      <li><a href="#skills">./tech_stack</a></li>
       <li><a href="#contact">./contact</a></li>
     </ul>
     <button class="menu-toggle" id="menuToggle" aria-label="Toggle menu">☰</button>
   </nav>
-
   <!-- ============ HERO ============ -->
   <header class="hero" id="home">
-    <div class="hero-inner">
-      <p class="terminal-line">$ whoami</p>
-      <h1 class="hero-name">SIMIT RAI<span class="cursor">_</span></h1>
-      <h2 class="hero-title">// GAME DEVELOPER</h2>
-      <p class="hero-desc">
-        I make games of diverse genre for mobile and web, ranging from educational and casual games to casino-style
-        and racing experiences, with focus on clean and scalable systems.
-      </p>
-      <div class="hero-cta">
-        <a href="#projects" class="btn btn-primary">VIEW WORK →</a>
-        <a href="#contact" class="btn btn-outline">GET IN TOUCH</a>
+    <!-- New Flex Wrapper -->
+    <div class="hero-content-wrapper">
+      <!-- Existing Content (Left Side) -->
+      <div class="hero-inner hero-left">
+        <p class="terminal-line"><span class="secondary-dollar">$</span> whoami</p>
+        <h1 class="hero-name">SIMIT <span class="text-nowrap">RAI<span class="cursor">_</span></span></h1>
+        <h2 class="hero-title">// GAME DEVELOPER</h2>
+        <p class="hero-desc">
+          I make games across diverse genres for mobile and WebGL, ranging from casual and educational to casino and
+          racing experiences with focus on instant player engagement, rapid onboarding, and clean, scalable code.
+        </p>
+        <div class="hero-cta">
+          <a href="#playable-demo" class="btn btn-primary">VIEW WORK →</a>
+          <a href="#contact" class="btn btn-outline">CONTACT ME</a>
+        </div>
+      </div>
+
+      <!-- New Right Side (Banners) -->
+      <div class="hero-right">
+        <div class="floating-banner banner-unity">
+          <div class="banner-icon-wrap"><img src="assets/images/icons/unity.png" alt="Unity"></div>
+          <div class="banner-text">
+            <h3>Unity Engine</h3>
+            <p>Gameplay, C#, Physics, Mobile & WebGL, Tweening</p>
+          </div>
+        </div>
+        <div class="floating-banner banner-phaser">
+          <div class="banner-icon-wrap"><img src="assets/images/icons/gamepad.png" alt="Game Design"></div>
+          <div class="banner-text">
+            <h3>Game Design & UX</h3>
+            <p>Core Loops, Level Design, User Experience</p>
+          </div>
+        </div>
+        <div class="floating-banner banner-flutter">
+          <div class="banner-icon-wrap"><img src="assets/images/icons/optimization.png" alt="Optimization"></div>
+          <div class="banner-text">
+            <h3>Game Optimization</h3>
+            <p>Performance, Profiling , Clean Architecture</p>
+          </div>
+        </div>
+        <!-- Y8 Publisher Token Banner -->
+        <div class="floating-banner banner-y8">
+          <div class="banner-icon-wrap y8-badge-wrap">
+            <img src="assets/images/icons/y8.png" alt="Y8"
+              onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+            <div class="y8-logo-fallback" style="display: none;">Y8</div>
+          </div>
+          <div class="banner-text">
+            <div class="y8-stat-header">
+              <h3 class="stat-number"><span class="counter" data-target="150">150</span>K+ Gameplays</h3>
+              <span class="y8-badge-pill">[ Indie Games on Y8 ]</span>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
+
     <div class="hero-meta">
-      <span>[ STATUS: AVAILABLE ]</span>
+      <span>[ STATUS: OPEN_TO_WORK ]</span>
       <span>[ BASED_IN: NEPAL ]</span>
       <span>[ ROLE: GAME_DEV ]</span>
     </div>
   </header>
 
-  <!-- ============ PROJECTS ============ -->
-  <section class="section" id="projects">
-    <h2 class="section-title">// 01 — FEATURED PROJECTS</h2>
-    <div class="project-grid" id="projectGrid">
-      <!-- injected by main.js -->
+  <!-- ============ FEATURED PLAYABLE DEMO ============ -->
+  <section class="section" id="playable-demo">
+    <div class="section-header-wrap">
+      <h2 class="section-title">// PLAYABLE AD — PLANET MERGE</h2>
+      <span class="playable-badge">[ FULL GAME AVAILABLE ]</span>
     </div>
-  </section>
-  <!-- ============ EXPERIENCE ============ -->
-  <section class="section" id="experience">
-    <h2 class="section-title">// 02 — EXPERIENCE</h2>
-    <div class="timeline">
-      <div class="timeline-entry">
-        <span class="t-date">[Dec 2024 - Dec 2025]</span>
-        <div>
-          <h4>Unity Game Developer — ChimpVine (Danson Solutions Pvt. Ltd.)</h4>
-          <ul class="exp-list">
-            <li>Developed multiple 2D/3D educational games for grade preK-8 students.</li>
-            <li>Collaborated with designers and QA to deliver polished gameplay experiences.</li>
-            <li>Built educational features integrated into core gameplay loops.</li>
-          </ul>
+
+    <div class="playable-container">
+
+      <!-- Left Column: Phone Frame & WebGL Canvas -->
+      <div class="phone-mockup-wrapper" id="phoneWrapper">
+        <div class="phone-frame">
+
+          <!-- Start Overlay Poster -->
+          <div class="playable-overlay" id="playableOverlay">
+            <div class="overlay-content">
+              <span class="overlay-tag">// INTERACTIVE WEBGL</span>
+              <h3 class="overlay-title">Planet Merge</h3>
+              <p class="overlay-sub">Scripted Playable Funnel</p>
+              <button class="btn btn-primary btn-play" id="startPlayableBtn" type="button">
+                ▶ START DEMO
+              </button>
+            </div>
+          </div>
+
+          <!-- WebGL Embed -->
+          <iframe id="playableIframe" data-src="assets/playable/PlanetMergePlayableBuild/index.html"
+            title="Planet Merge Playable Game" allow="autoplay; fullscreen">
+          </iframe>
+        </div>
+
+        <!-- External Phone Controls -->
+        <div class="phone-controls">
+          <button class="control-btn" id="replayGameBtn" title="Restart Game" type="button">
+            <span>↺</span> REPLAY
+          </button>
+          <button class="control-btn" id="fullscreenGameBtn" title="Toggle Fullscreen" type="button">
+            <span>⛶</span> FULLSCREEN
+          </button>
         </div>
       </div>
 
-      <div class="timeline-entry">
-        <span class="t-date">[Jan 2024 - Present]</span>
-        <div>
-          <h4>Indie Game Development Journey</h4>
-          <ul class="exp-list">
-            <li>Launched multiple mobile and web games, with 130K+ game-plays on Y8.</li>
-            <li>Designed, developed, and published games independently.</li>
-            <li>Gained hands-on experience across the full gameplay development pipeline.</li>
-          </ul>
+      <!-- Right Column: Design Rationale & Funnel Analysis -->
+      <div class="playable-details">
+        <p class="terminal-line"><span class="secondary-dollar">$</span> cat ./design_specs.md</p>
+        <h3 class="details-heading">Design &amp; Conversion Rationale</h3>
+        <p class="details-desc">
+          A short scripted playable ad engineered to maximize first-time user engagement and end-card click-through
+          rates (CTR).
+        </p>
+
+        <div class="specs-grid">
+          <div class="spec-card">
+            <span class="spec-label">CORE HOOK</span>
+            <p>Onboarding hint active from the start frame, guiding drag-and-drop mechanics.</p>
+          </div>
+          <div class="spec-card">
+            <span class="spec-label">SCRIPTED FUNNEL</span>
+            <p>Controlled progression path to maintain player momentum before triggering the CTA.</p>
+          </div>
+          <div class="spec-card">
+            <span class="spec-label">FEEDBACK &amp; JUICE</span>
+            <p>Particle effects, tweenings and audio feedback to reward
+              player actions.</p>
+          </div>
+          <div class="spec-card">
+            <span class="spec-label">END CARD / CTA</span>
+            <p>Store redirection triggering upon reaching scripted milestones.</p>
+          </div>
+        </div>
+
+        <p class="details-desc">
+          Space asset credit: @RafaelMatoson on Itch
+        </p>
+
+        <div class="playable-tech-tags">
+          <span>[ Unity WebGL ]</span>
+          <span>[ Playable Ad Design ]</span>
+          <span>[ C# ]</span>
+          <span>[ Monetization Funnel ]</span>
         </div>
       </div>
+
+    </div>
+  </section>
+
+  <!-- ============ PROJECTS ============ -->
+  <section class="section" id="projects">
+    <div class="section-header-wrap">
+      <h2 class="section-title">// 01 — FEATURED PROJECTS</h2>
+      <div class="carousel-controls">
+        <button class="carousel-nav-btn" id="prevSlide" aria-label="Previous Project">
+          <span class="btn-icon">←</span> PREV
+        </button>
+        <span class="carousel-counter" id="carouselCounter">[ 01 / 05 ]</span>
+        <button class="carousel-nav-btn" id="nextSlide" aria-label="Next Project">
+          NEXT <span class="btn-icon">→</span>
+        </button>
+      </div>
+    </div>
+
+    <!-- Carousel Container -->
+    <div class="carousel-wrapper">
+      <div class="carousel-track" id="projectGrid">
+        <!-- Slide content dynamically rendered by main.js -->
+      </div>
+    </div>
+
+    <!-- Indicator Dots -->
+    <div class="carousel-dots" id="carouselDots">
+      <!-- Dots rendered by main.js -->
     </div>
   </section>
 
   <!-- ============ SKILLS ============ -->
   <section class="section" id="skills">
-    <h2 class="section-title">// 03 — SKILLS</h2>
-    <div class="skills-grid">
-      <div class="skills-col">
-        <h3 class="col-heading">$ ls ./skills</h3>
-        <ul class="tag-list">
-          <li>[ UNITY ]</li>
-          <li>[ C#, OOP, SOLID, Design Patterns ]</li>
-          <li>[ WebGL/Mobile Build & Deployment ]</li>
-          <li>[ Google Play Console ]</li>
-          <li>[ GIT, GitHub ]</li>
-          <li>[ Unity Ads, Y8 Ads ]</li>
-          <li>[ FIREBASE (Auth, Firestore) ]</li>
-          <li>[ REST API, JSON ]</li>
-          <li>[ FIGMA, UI/UX ]</li>
-          <li>[ Performance Optimization ]</li>
-          <li>[ Scratch ]</li>
-        </ul>
+    <h2 class="section-title">// 02 — TECH STACK &amp; SKILLS</h2>
+
+    <div class="skills-wrapper">
+      <!-- Category: Engines & Core -->
+      <div class="skill-category">
+        <h3 class="category-title"><span class="secondary-dollar">$</span> ls ./engines_and_languages</h3>
+        <div class="skills-badge-grid">
+          <div class="skill-badge">
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/unity/unity-original.svg" alt="Unity"
+              class="skill-icon white-icon">
+            <span>Unity Engine</span>
+          </div>
+          <div class="skill-badge">
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/csharp/csharp-original.svg" alt="C#"
+              class="skill-icon">
+            <span>C#</span>
+          </div>
+          <div class="skill-badge">
+            <img src="assets/images/icons/webGL.png" alt="C#" class="skill-icon">
+            <span>HTML5 / WebGL</span>
+          </div>
+          <div class="skill-badge">
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/flutter/flutter-original.svg" alt="Flutter"
+              class="skill-icon">
+            <span>Flutter</span>
+          </div>
+          <div class="skill-badge">
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/dart/dart-original.svg" alt="Dart"
+              class="skill-icon">
+            <span>Dart</span>
+          </div>
+          <div class="skill-badge">
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/godot/godot-original.svg" alt="Godot"
+              class="skill-icon">
+            <span>Godot</span>
+          </div>
+        </div>
       </div>
 
-      <div class="skills-col">
-        <h3 class="col-heading">$ ls ./currently_learning</h3>
-        <ul class="tag-list">
-          <li>[ MULTIPLAYER_NETWORKING ]</li>
-          <li>[ FLUTTER ]</li>
-          <li>[ AR_FOUNDATION ]</li>
-        </ul>
+      <!-- Category: Tools, Backend & Services -->
+      <div class="skill-category">
+        <h3 class="category-title"><span class="secondary-dollar">$</span> ls ./tools_and_backend</h3>
+        <div class="skills-badge-grid">
+          <div class="skill-badge">
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg" alt="Git"
+              class="skill-icon">
+            <span>Git / GitHub</span>
+          </div>
+          <div class="skill-badge">
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/firebase/firebase-plain.svg" alt="Firebase"
+              class="skill-icon">
+            <span>Firebase</span>
+          </div>
+          <div class="skill-badge">
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/unity/unity-original.svg" alt="Playworks"
+              class="skill-icon white-icon">
+            <span>Unity Playworks</span>
+          </div>
+          <div class="skill-badge">
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg" alt="Node.js"
+              class="skill-icon">
+            <span>WebSockets / REST</span>
+          </div>
+          <div class="skill-badge">
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/figma/figma-original.svg" alt="Figma"
+              class="skill-icon">
+            <span>Figma UI/UX</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Category: Platforms & Monetization -->
+      <div class="skill-category">
+        <h3 class="category-title"><span class="secondary-dollar">$</span> ls ./platforms_and_monetization</h3>
+        <div class="skills-badge-grid">
+          <div class="skill-badge">
+            <img src="assets/images/icons/y8.png" alt="Figma" class="skill-icon">
+            <span>Y8 SDK / Ads</span>
+          </div>
+          <div class="skill-badge">
+            <img src="assets/images/icons/playconsole.png" alt="Play Console" class="skill-icon">
+            <span>Play Console</span>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- Currently Learning / Exploring -->
+      <div class="skill-category">
+        <h3 class="category-title"><span class="secondary-dollar">$</span> cat ./currently_exploring</h3>
+        <div class="learning-pills">
+          <span class="learning-pill">[ MULTIPLAYER NETWORKING ]</span>
+          <span class="learning-pill">[ AR FOUNDATION / ARCORE ]</span>
+          <span class="learning-pill">[ FLUTTER ]</span>
+          <span class="learning-pill">[ UNITY PLAYWORKS ]</span>
+
+        </div>
       </div>
     </div>
   </section>
 
+  <!-- ============ EXPERIENCE ============ -->
+  <section class="section" id="experience">
+    <h2 class="section-title">// 03 — EXPERIENCE</h2>
 
+    <div class="timeline-container">
+      <div class="timeline-item">
+        <div class="timeline-marker"></div>
+        <div class="timeline-content">
+          <div class="timeline-header">
+            <h4 class="role-title">Unity Game Developer</h4>
+            <span class="t-date">[ Dec 2024 — Dec 2025 ]</span>
+          </div>
+          <h5 class="company-name">// ChimpVine (Danson Solutions Pvt. Ltd.)</h5>
+          <ul class="exp-list">
+            <li>Developed multiple 2D/3D educational games for PreK-8 students.</li>
+            <li>Collaborated with designers and QA to deliver polished gameplay loops.</li>
+            <li>Integrated core educational mechanics with optimized WebGL/Mobile builds.</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="timeline-item">
+        <div class="timeline-marker"></div>
+        <div class="timeline-content">
+          <div class="timeline-header">
+            <h4 class="role-title">Indie Game Development</h4>
+            <span class="t-date">[ Jan 2024 — Present ]</span>
+          </div>
+          <h5 class="company-name">// Independent Projects</h5>
+          <ul class="exp-list">
+            <li>Launched mobile and web games reaching 150K+ game-plays on Y8.</li>
+            <li>Designed, programmed, and deployed games end-to-end.</li>
+            <li>Implemented ad networks, monetization strategies, and user engagement features.</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
   <!-- ============ CERTIFICATIONS & AWARDS ============ -->
   <section class="section" id="certifications">
     <h2 class="section-title">// 04 — CERTIFICATIONS &amp; AWARDS</h2>
+
     <div class="cert-grid">
-      <div class="cert-card">
-        <span class="cert-tag">[ AWARD ]</span>
+      <div class="cert-card award-card">
+        <div class="cert-header">
+          <span class="cert-tag tag-award">[ AWARD ]</span>
+          <span class="cert-date">2026</span>
+        </div>
         <h3 class="cert-title">HackFusion 2026 — Winner</h3>
-        <p class="cert-issuer">Inter-College Innovation Hackathon</p>
-        <p class="cert-desc">Won first place for NavRoom AR, an AR indoor navigation app built in a 3-person team.</p>
+        <p class="cert-issuer">// Inter-College Innovation Hackathon</p>
+        <p class="cert-desc">Won 1st place for NavRoom AR, an AR indoor navigation mobile application developed in a
+          3-person team.</p>
         <a href="project.html?id=navroom-ar" class="cert-link">VIEW PROJECT →</a>
-
       </div>
+
       <div class="cert-card">
-        <span class="cert-tag">[ CERTIFICATE ]</span>
+        <div class="cert-header">
+          <span class="cert-tag tag-cert">[ CERTIFICATE ]</span>
+          <span class="cert-date">36 Hours</span>
+        </div>
         <h3 class="cert-title">UI/UX Design</h3>
-        <p class="cert-issuer">Broadway Infosys</p>
-        <p class="cert-desc">Certificate of completion for a professional 36 hours UI/UX design course.</p>
+        <p class="cert-issuer">// Broadway Infosys</p>
+        <p class="cert-desc">Professional training certification covering user research, wireframing, interactive
+          prototyping, and visual design fundamentals.</p>
         <a href="https://broadwayinfosys.com/certificate-verification-code/eyJpdiI6InZ1a3d3V01iYUdXOTFWVkVzSmIyVVE9PSIsInZhbHVlIjoiZTJRWHhMdkNrRlRISjlMbytBWWNodz09IiwibWFjIjoiMmVjZTVmMzAwMmZiZDJlOTI2ODI4YTU5NzVjMmMzMTYxYjgwYTkxN2IxOWY1MjViN2M4Yzk2YmVkZGUzMmJlOSIsInRhZyI6IiJ9"
-          class="cert-link">VIEW CERTIFICATE →</a>
+          class="cert-link" target="_blank" rel="noopener">VERIFY CERTIFICATE →</a>
       </div>
-
     </div>
   </section>
 
   <!-- ============ CONTACT ============ -->
   <section class="section" id="contact">
     <h2 class="section-title">// 05 — CONTACT</h2>
-    <div class="contact-wrap">
-      <p class="terminal-line">$ ./contact --send</p>
-      <p class="contact-lead">Got an idea? Let's build it together.</p>
+
+    <div class="contact-card">
+      <p class="terminal-line"><span class="secondary-dollar">$</span> ./contact --send-message</p>
+      <h3 class="contact-heading">Got an idea? Let's build something together.</h3>
+      <p class="contact-lead">Whether you have a game project, collaboration opportunity, or just want to talk game dev,
+        feel free to reach out.</p>
+
+      <!-- Email Copy Bar -->
+      <div class="email-box">
+        <div class="email-info">
+          <span class="email-label">$ email:</span>
+          <code class="email-address" id="emailAddress">simitchamling@gmail.com</code>
+        </div>
+        <button class="btn-copy" id="copyEmailBtn" aria-label="Copy Email Address">
+          <span id="copyBtnText">[ COPY EMAIL ]</span>
+        </button>
+      </div>
+
+      <!-- Social & Direct Links -->
       <div class="contact-links">
-        <a href="mailto:simitchamling@gmail.com" class="contact-link">[ EMAIL ]</a>
+        <a href="assets/docs/resume.pdf" class="contact-link resume-link" target="_blank" rel="noopener">[
+          VIEW RESUME 📄 ]</a>
+        <a href="mailto:simitchamling@gmail.com" class="contact-link">[ MAIL CLIENT ]</a>
         <a href="https://github.com/ssSimit" class="contact-link" target="_blank" rel="noopener">[ GITHUB ]</a>
         <a href="https://www.linkedin.com/in/simit-rai/" class="contact-link" target="_blank" rel="noopener">[ LINKEDIN
           ]</a>
