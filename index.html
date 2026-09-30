@@ -37,7 +37,7 @@
           racing experiences with focus on instant player engagement, rapid onboarding, and clean, scalable code.
         </p>
         <div class="hero-cta">
-          <a href="#playable-demo" class="btn btn-primary">VIEW WORK →</a>
+          <a href="#projects" class="btn btn-primary">VIEW WORK →</a>
           <a href="#contact" class="btn btn-outline">CONTACT ME</a>
         </div>
       </div>
@@ -89,6 +89,33 @@
     </div>
   </header>
 
+  <!-- ============ PROJECTS ============ -->
+  <section class="section" id="projects">
+    <div class="section-header-wrap">
+      <h2 class="section-title">// 01 — FEATURED PROJECTS</h2>
+      <div class="carousel-controls">
+        <button class="carousel-nav-btn" id="prevSlide" aria-label="Previous Project">
+          <span class="btn-icon">←</span> PREV
+        </button>
+        <span class="carousel-counter" id="carouselCounter">[ 01 / 05 ]</span>
+        <button class="carousel-nav-btn" id="nextSlide" aria-label="Next Project">
+          NEXT <span class="btn-icon">→</span>
+        </button>
+      </div>
+    </div>
+
+    <!-- Carousel Container -->
+    <div class="carousel-wrapper">
+      <div class="carousel-track" id="projectGrid">
+        <!-- Slide content dynamically rendered by main.js -->
+      </div>
+    </div>
+
+    <!-- Indicator Dots -->
+    <div class="carousel-dots" id="carouselDots">
+      <!-- Dots rendered by main.js -->
+    </div>
+  </section>
   <!-- ============ FEATURED PLAYABLE DEMO ============ -->
   <section class="section" id="playable-demo">
     <div class="section-header-wrap">
@@ -102,12 +129,11 @@
       <div class="phone-mockup-wrapper" id="phoneWrapper">
         <div class="phone-frame">
 
-          <!-- Start Overlay Poster -->
+          <!-- Start Overlay Poster with Screenshot Background -->
           <div class="playable-overlay" id="playableOverlay">
             <div class="overlay-content">
               <span class="overlay-tag">// INTERACTIVE WEBGL</span>
               <h3 class="overlay-title">Planet Merge</h3>
-              <p class="overlay-sub">Scripted Playable Funnel</p>
               <button class="btn btn-primary btn-play" id="startPlayableBtn" type="button">
                 ▶ START DEMO
               </button>
@@ -140,23 +166,23 @@
           rates (CTR).
         </p>
 
+        <!-- High-Impact Bullet Specs -->
         <div class="specs-grid">
           <div class="spec-card">
             <span class="spec-label">CORE HOOK</span>
-            <p>Onboarding hint active from the start frame, guiding drag-and-drop mechanics.</p>
+            <span class="spec-value">2-Sec Drag-&amp;-Drop Onboarding</span>
           </div>
           <div class="spec-card">
             <span class="spec-label">SCRIPTED FUNNEL</span>
-            <p>Controlled progression path to maintain player momentum before triggering the CTA.</p>
+            <span class="spec-value">Dynamic Mid-Game Bomb Hints</span>
           </div>
           <div class="spec-card">
             <span class="spec-label">FEEDBACK &amp; JUICE</span>
-            <p>Particle effects, tweenings and audio feedback to reward
-              player actions.</p>
+            <span class="spec-value">Particle Bursts &amp; Easing FX</span>
           </div>
           <div class="spec-card">
             <span class="spec-label">END CARD / CTA</span>
-            <p>Store redirection triggering upon reaching scripted milestones.</p>
+            <span class="spec-value">Store Redirection Trigger</span>
           </div>
         </div>
 
@@ -172,34 +198,6 @@
         </div>
       </div>
 
-    </div>
-  </section>
-
-  <!-- ============ PROJECTS ============ -->
-  <section class="section" id="projects">
-    <div class="section-header-wrap">
-      <h2 class="section-title">// 01 — FEATURED PROJECTS</h2>
-      <div class="carousel-controls">
-        <button class="carousel-nav-btn" id="prevSlide" aria-label="Previous Project">
-          <span class="btn-icon">←</span> PREV
-        </button>
-        <span class="carousel-counter" id="carouselCounter">[ 01 / 05 ]</span>
-        <button class="carousel-nav-btn" id="nextSlide" aria-label="Next Project">
-          NEXT <span class="btn-icon">→</span>
-        </button>
-      </div>
-    </div>
-
-    <!-- Carousel Container -->
-    <div class="carousel-wrapper">
-      <div class="carousel-track" id="projectGrid">
-        <!-- Slide content dynamically rendered by main.js -->
-      </div>
-    </div>
-
-    <!-- Indicator Dots -->
-    <div class="carousel-dots" id="carouselDots">
-      <!-- Dots rendered by main.js -->
     </div>
   </section>
 

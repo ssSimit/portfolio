@@ -53,13 +53,30 @@ const projects = [
         tech: ["Unity", "3D", "Y8", "Y8 Ads"],
         video: "assets/videos/extremeWheels.mp4",
         poster: "assets/images/extreme-wheels-poster.png",
+
         orientation: "landscape",
         cardMedia: "video",
         link: "https://www.y8.com/games/extreme_wheels_2_player_racing",
         playUrl: "https://www.y8.com/games/extreme_wheels_2_player_racing",
         buttonText: "PLAY GAME→",
+        showOnHome: true
     },
-
+    {
+        id: "project-seven",
+        title: "Desert Wheels",
+        tagline: "A thrilling high-speed racing game available on Y8",
+        shortDesc: "Race against challenging bots or compete with friends in local multiplayer split-screen mode.",
+        longDesc: `Desert Wheels is a 3D racing game available on Y8. It features high-speed gameplay and challenging AI opponents. Players can unlock new vehicles, and compete in local multiplayer mode. The game emphasizes fast and immersive environments to provide an engaging racing experience.`,
+        tech: ["Unity", "3D", "Y8", "Y8 Ads"],
+        video: "assets/videos/desertWheels.mp4",
+        poster: "assets/images/desert-wheels-poster.png",
+        orientation: "landscape",
+        cardMedia: "video",
+        link: "https://www.y8.com/games/desert_wheels",
+        playUrl: "https://www.y8.com/games/desert_wheels",
+        buttonText: "PLAY GAME→",
+        showOnHome: false
+    },
 
     {
         id: "project-three",

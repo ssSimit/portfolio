@@ -444,7 +444,6 @@ ul {
   position: relative;
   width: 320px;
   height: 568px;
-  /* 9:16 aspect ratio */
   background: #000;
   border-radius: 24px;
   border: 3px solid rgba(237, 237, 237, 0.2);
@@ -482,7 +481,6 @@ ul {
   height: 85vh;
   width: auto;
   aspect-ratio: 9 / 16;
-  /* Strict 9:16 lock */
   max-width: calc(85vh * (9 / 16));
   border-radius: 16px;
   box-shadow: 0 0 40px rgba(0, 255, 255, 0.3);
@@ -494,15 +492,17 @@ ul {
   margin-top: 0.5rem;
 }
 
-/* Playable Start Overlay */
+/* Playable Start Overlay with Screenshot Tint */
 .playable-overlay {
   position: absolute;
   top: 0;
   left: 0;
   right: 0;
   bottom: 0;
-  background: linear-gradient(180deg, rgba(10, 10, 10, 0.75) 0%, rgba(13, 18, 31, 0.95) 100%);
-  backdrop-filter: blur(4px);
+  /* Dark linear gradient layered over screenshot asset */
+  background: linear-gradient(180deg, rgba(10, 10, 15, 0.7) 0%, rgba(13, 18, 31, 0.92) 100%),
+    url('assets/images/playableSS.png') center/cover no-repeat;
+  backdrop-filter: blur(2px);
   z-index: 5;
   display: flex;
   justify-content: center;
@@ -533,13 +533,13 @@ ul {
 }
 
 .overlay-sub {
-  font-size: 0.82rem;
-  color: var(--grey);
-  margin-bottom: 1.5rem;
+  font-size: 0.8rem;
+  color: #cfcfcf;
+  margin-bottom: 1.25rem;
 }
 
 .btn-play {
-  box-shadow: 0 0 15px rgba(255, 255, 255, 0.3);
+  box-shadow: 0 0 15px rgba(0, 255, 255, 0.3);
   cursor: pointer;
 }
 
@@ -573,7 +573,7 @@ ul {
   color: var(--secondary-cyan);
 }
 
-/* Right Side Specs */
+/* Right Side Details & Highlighted Spec Cards */
 .playable-details {
   display: flex;
   flex-direction: column;
@@ -595,30 +595,38 @@ ul {
 
 .specs-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-  gap: 1rem;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 0.85rem;
 }
 
 .spec-card {
-  background: rgba(13, 18, 31, 0.4);
-  border: 1px solid rgba(237, 237, 237, 0.1);
+  background: rgba(13, 18, 31, 0.6);
+  border: 1px solid rgba(0, 255, 255, 0.15);
   border-radius: 8px;
-  padding: 1rem;
+  padding: 0.85rem 1rem;
+  transition: border-color 0.2s ease, transform 0.2s ease;
+}
+
+.spec-card:hover {
+  border-color: var(--secondary-cyan);
+  transform: translateY(-2px);
 }
 
 .spec-label {
-  font-size: 0.72rem;
+  font-size: 0.7rem;
   font-weight: 700;
   color: var(--secondary-purple);
   display: block;
-  margin-bottom: 0.4rem;
-  letter-spacing: 0.05em;
+  margin-bottom: 0.35rem;
+  letter-spacing: 0.06em;
 }
 
-.spec-card p {
-  font-size: 0.82rem;
+.spec-value {
+  font-size: 0.88rem;
+  font-weight: 700;
   color: var(--white);
-  line-height: 1.4;
+  line-height: 1.35;
+  display: block;
 }
 
 .playable-tech-tags {
